@@ -1,15 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import LandingPage from './containers/landing.jsx';
+
 const App = () => {
   return (
     <div>
-    <header>
-      <h1>Welcome to NoteNest</h1>
-    </header>
-    <main>
-      {/* login component here */}
-    </main>
+      {< LandingPage /> }
     </div>
   )
 }
