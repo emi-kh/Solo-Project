@@ -6,10 +6,10 @@ const bodyParser = require('body-parser');
 // const fetch = require('node-fetch');
 const PORT = 3000;
 
-const userRoutes = require('./Routes/userRoutes');
-const fileRoutes = require('./Routes/fileRoutes');
-const tagRoutes = require('./Routes/tagRoutes');
-const collectRoutes = require('./Routes/collectRoutes');
+const userRoutes = require('./routes/userRoutes');
+const fileRoutes = require('./routes/fileRoutes');
+const tagRoutes = require('./routes/tagRoutes');
+const nestRoutes = require('./routes/nestRoutes');
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
@@ -23,7 +23,7 @@ app.use(express.static(path.resolve(__dirname, '../build')));
 app.use('/users', userRoutes);
 app.use('/file', fileRoutes);
 app.use('/tag', tagRoutes);
-app.use('/collect', collectRoutes);
+app.use('/nest', nestRoutes);
 
 
 // Catch-all route handler

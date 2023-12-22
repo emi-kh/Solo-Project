@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const collectController = require('../Controllers/collectController');
+const nestController = require('../controllers/nestController');
 
-// get collection: get all collections, search for colection by name?
+// get nest: get all nests, search for nest by name?
 
 // post request create collection
 

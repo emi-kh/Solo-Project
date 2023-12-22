@@ -1,5 +1,5 @@
 {
-  "name": "emi-solo-project",
+  "name": "NoteNest",
   "version": "1.0.0",
   "description": "App for organizing files through tags",
   "main": "webpack.config.js",

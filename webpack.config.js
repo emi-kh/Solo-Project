@@ -24,9 +24,9 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Solo-Project',
+      title: 'NoteNest',
       filename: 'index.html',
-      template: './Client/index.html'
+      template: './client/index.html'
     }),
   ],
   module: {
@@ -58,6 +58,11 @@ module.exports = () => {
   return config;
 };
 
+
+
+
+
+// output from webpack-cli init config process:
 
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 

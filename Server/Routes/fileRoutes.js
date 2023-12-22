@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const fileController = require('../Controllers/fileController');
+const fileController = require('../controllers/fileController');
 
 // get req file by Id or name?
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const tagController = require('../Controllers/tagController');
+const tagController = require('../controllers/tagController');
 
 // get req: get tag and all associated files
 

@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
     <header>
-      <h1>Emi Solo Project</h1>
+      <h1>Welcome to NoteNest</h1>
     </header>
     <main>
       {/* login component here */}
