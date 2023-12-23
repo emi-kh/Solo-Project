@@ -15,7 +15,7 @@ const SplashPage = () => {
   return (
     <div id='splashMain'>
       {/* < LoginPage /> */}
-      <input type='submit' value="Enter" onChange={handleEnter}></input>
+      <input id="enterB" type='submit' value="Enter" onChange={handleEnter}></input>
     </div> 
   );
 

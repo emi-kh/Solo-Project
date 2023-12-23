@@ -1,4 +1,17 @@
-
-#splashMain {
-  background-color: #36454F;
+body {
+  background-color: #13171a;
+  margin: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
+
+
+#enterB {
+  background-color: #FFD700;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
