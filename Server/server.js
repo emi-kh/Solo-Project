@@ -16,7 +16,12 @@ app.use(express.urlencoded({ extended: true }));
 
 //end point to statically serve page
 // app.use(express.static(path.resolve(__dirname, '../Client/index.js')));
-app.use(express.static(path.resolve(__dirname, '../build')));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.resolve(__dirname, '../build')));
+} else {
+  app.use(express.static(path.resolve(__dirname, '../client')));
+}
+
 
 
 // Routes

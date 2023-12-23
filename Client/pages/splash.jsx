@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginPage from '../components/login.jsx';
-import Homepage from './pages/homepage.jsx';
+import Homepage from './homepage.jsx';
 
 const SplashPage = () => {
   
