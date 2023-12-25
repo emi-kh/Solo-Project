@@ -14,11 +14,6 @@ const nestRoutes = require('./routes/nestRoutes');
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
-// serve correct MIME type for styles.css
-// app.use('/styles.css', (req, res) => {
-//   res.type('text/css');
-// });
-
 // app.get('/styles.css', (req, res) => {
 //   return res.status(200).sendFile(path.resolve(__dirname, './client/styles.css'));
 // });
@@ -30,6 +25,10 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, '../client')));
 }
 
+//statically serve homepage
+app.use('/homepage', (req, res) => {
+  return express.static(path.resolve(__dirname, '../client/pages/homegae.jsx'));
+});
 
 
 // Routes
