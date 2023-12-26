@@ -10,6 +10,8 @@ const fileController = require('../controllers/fileController');
 // patch request change file. Could have multiple conidtionals or different controllers for changing file name, notes section, associated tags, associated collections?
 
 // delete req file deleted
+// modelName.findByIdandDelete(req.params.id)
+// then return res.json(modelName)
 
 // Export router
 module.exports = router;

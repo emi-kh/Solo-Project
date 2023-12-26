@@ -7,7 +7,7 @@ mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   // sets the name of the DB that our collections are part of
-  dbName: 'tagDatabase'
+  dbName: 'NoteNestDB'
 })
   .then(() => console.log('Connected to Mongo DB.'))
   .catch(err => console.log(err));
@@ -34,7 +34,10 @@ const fileSchema = new Schema({
   },
   tags: [],
   collections: [],
-  upload_date: Number,
+  upload_date: {
+    type: String,
+    default: Date.now()
+  },
   type: String,
   path: {type: String, required: true},
 });

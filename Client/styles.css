@@ -1,10 +1,19 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
   background-color: #13171a;
-  margin: 0; 
+  height: 100vh; 
+}
+
+#splashMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh; 
 }
 

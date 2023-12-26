@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
+// const cors = require('cors');
 // const mongoose = require('mongoose');
 // const fetch = require('node-fetch');
 const PORT = 3000;
@@ -11,12 +12,11 @@ const fileRoutes = require('./routes/fileRoutes');
 const tagRoutes = require('./routes/tagRoutes');
 const nestRoutes = require('./routes/nestRoutes');
 
+
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use(cors()); // stops cors errors from coming through
 
-// app.get('/styles.css', (req, res) => {
-//   return res.status(200).sendFile(path.resolve(__dirname, './client/styles.css'));
-// });
 
 //end point to statically serve page
 if (process.env.NODE_ENV === 'production') {
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
 
 //statically serve homepage
 app.use('/homepage', (req, res) => {
-  return express.static(path.resolve(__dirname, '../client/pages/homegae.jsx'));
+  return res.sendFile(path.resolve(__dirname, '../client/pages/homepage.jsx'));
 });
 
 
