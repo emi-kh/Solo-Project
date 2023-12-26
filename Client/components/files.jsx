@@ -5,4 +5,4 @@ const Files = () => {
 
 }
 
-module.exports = Files;
+export default Files;

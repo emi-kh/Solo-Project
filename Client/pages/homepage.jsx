@@ -13,10 +13,10 @@ const Homepage = () => {
   return (
     <div>
       < NavBar />
-      < SideBar />
-      < MainCHome />
+      {/* < SideBar />
+      < MainCHome /> */}
     </div>
   );
 }
 
-module.exports = Homepage;
+export default Homepage;

@@ -5,4 +5,4 @@ const Create = () => {
 
 }
 
-module.exports = Create;
+export default Create;

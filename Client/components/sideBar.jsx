@@ -39,4 +39,4 @@ const SideBar = () => {
   );
 }
 
-module.exports = SideBar;
+export default SideBar;

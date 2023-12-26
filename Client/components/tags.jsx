@@ -5,4 +5,4 @@ const Tags = () => {
 
 }
 
-module.exports = Tags;
+export default Tags;

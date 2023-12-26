@@ -4,4 +4,4 @@ const Nests = () => {
 
 }
 
-module.exports = Nests;
+export default Nests;

@@ -50,4 +50,4 @@ const MainCHome = () => {
 
 }
 
-module.exports = MainCHome;
+export default MainCHome;
