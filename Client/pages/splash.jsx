@@ -6,23 +6,22 @@ import Homepage from './homepage.jsx';
 const SplashPage = () => {
   console.log(window.location)
   const handleEnter = (e) => {
-
+    
     // if (e) return window.location.pathname = '/homepage';
-    // if (e) {
-    //   fetch('/homepage')
-    //     .then(res => res.json())
-    //     .then(data => {
-    //       // data to route
-    //       window.location.pathname = data
-    //     })
-    //     .catch(err => console.log(`Error ${err}, found in splash.jsx line 11 fetch res to /homepage`))
-    // }
+      fetch('/homepage')
+        .then(res => res.json())
+        .then(data => {
+          // data to route
+          console.log('line 15: ', data)
+          window.location.href = data
+        })
+        .catch(err => console.log(`Error ${err}, found in splash.jsx line 11 fetch res to /homepage`))
   }
 
   return (
     <div id='splashMain'>
       {/* < LoginPage /> */}
-      <input id="enterB" type='submit' value="Enter" onClick={handleEnter}></input>
+      <input id="enterB" type='submit' value="Enter" method="GET" action='/homepage' onClick={handleEnter}></input>
     </div> 
   );
 

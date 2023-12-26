@@ -27,7 +27,9 @@ if (process.env.NODE_ENV === 'production') {
 
 //statically serve homepage
 app.use('/homepage', (req, res) => {
-  return res.sendFile(path.resolve(__dirname, '../client/pages/homepage.jsx'));
+  // return res.sendFile(path.resolve(__dirname, '../client/pages/homepage.jsx'));
+  return res.redirect('http://localhost:3000/client/pages/homepage');
+  // return express.static(path.resolve(__dirname, '../client/pages/homepage.jsx'));
 });
 
 
