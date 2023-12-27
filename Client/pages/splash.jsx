@@ -1,27 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 
 import LoginPage from '../components/login.jsx';
-import Homepage from './homepage.jsx';
+import SignUp from '../components/signup.jsx';
 
 const SplashPage = () => {
-  console.log(window.location)
+
   const handleEnter = (e) => {
-    
-    // if (e) return window.location.pathname = '/homepage';
-      fetch('/homepage')
-        .then(res => res.json())
-        .then(data => {
-          // data to route
-          console.log('line 15: ', data)
-          window.location.href = data
-        })
-        .catch(err => console.log(`Error ${err}, found in splash.jsx line 11 fetch res to /homepage`))
-  }
+    if (e) {
+      const navigate = useNavigate();
+      
+      useEffect(() => {
+        setTimeout(() => {
+          navigate('/')
+        }, 1000)
+      }, []);
+    }
+    }
 
   return (
     <div id='splashMain'>
       {/* < LoginPage /> */}
-      <input id="enterB" type='submit' value="Enter" method="GET" action='/homepage' onClick={handleEnter}></input>
+      <Link className='enterB' to='/' >Enter</Link>
+      {/* <input className="enterB" type='submit' value="Enter" method="GET" action='/homepage' onClick={handleEnter}></input> */}
     </div> 
   );
 

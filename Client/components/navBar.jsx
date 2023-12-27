@@ -1,26 +1,15 @@
 import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 
 const NavBar = () => {
-  // const Profile = () => {
-  //   <input id="profileB" type='submit' value="Profile" ></input>
-  // }
-  // const Settings = () => {
-  //   <input id="settingsB" type='submit' value="Settings" ></input>
-  // }
-  
+
   return (
-    // <div className="nav">
-    //   < Profile />
-    //   < Settings />
-    // </div>
-    <nav className="nav">
-      <a href="/" className="site-title">NoteNest</a>
+
+    <nav className="nav-top">
+      <Link to="/" className="site-title">NoteNest</Link>
       <ul>
-        <li className='active'>
-          <a href="/profile">Profile</a>
-        </li>
-        <li className='active'>
-          <a href='/settings'>Settings</a>
+        <li className='nav-topB'>
+          <Link to='/settings'>Settings</Link>
         </li>
       </ul>
     </nav> 

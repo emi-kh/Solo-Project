@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 
 import NavBar from '../components/navBar.jsx';
 import SideBar from '../components/sideBar.jsx';
@@ -11,10 +12,12 @@ import MainCHome from '../containers/mainHome.jsx';
 
 const Homepage = () => {
   return (
-    <div>
+    <div >
       < NavBar />
-      {/* < SideBar />
-      < MainCHome /> */}
+    {/* <div id='sideBar'> */}
+      < SideBar />
+    {/* </div> */}
+      {/* < MainCHome /> */}
     </div>
   );
 }

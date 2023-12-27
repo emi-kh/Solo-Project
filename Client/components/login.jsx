@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 
 const LoginPage = () => {
-
+  const handleSubmit = () => {
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+      setTimeout(() => {
+        navigate('/home')
+      }, 1000)
+    }, []);
+  }
   return (
     <div>
       <header>
@@ -16,15 +25,6 @@ const LoginPage = () => {
             <input name="password" type="password" placeholder="password"></input>
             <br></br>
             <input type='submit' value="Login"></input>
-          </form>
-        </div>
-        <div id='signupForm'>
-          <p>Sign Up</p>
-          <form method='POST' action='/signup'>
-            <input name="username" type="text" placeholder="username"></input>
-            <input name="password" type="password"></input>
-            <br></br>
-            <input type="submit" value="Create User"></input>
           </form>
         </div>
       </main>

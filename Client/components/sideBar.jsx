@@ -1,41 +1,32 @@
 import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+
 
 
 const SideBar = () => {
-  const CreateB = () => {
-    const handleCreateB = (e) => {
-    //   if (e) return  // change sideCreateT variable to true, renders in main container section not in side bar
-    }
-    return <input id="allTagsB" type='submit' value="Tags" onChange={ handleCreateB }></input>
-  }
+  // const CreateB = () => {
+  //   const handleCreateB = (e) => {
+  //   //   if (e) return  // change sideCreateT variable to true, renders in main container section not in side bar
+  //   }
+  //   return <input id="allTagsB" type='submit' value="Tags" onChange={ handleCreateB }></input>
+  // }
 
-  const AllTags = () => {
-    const handleTagsB = (e) => {
-      // change sideTagsT to true
-    }
-    return <input id="allTagsB" type='submit' value="Tags" onChange={ handleTagsB }></input>
-  }
-  const AllFiles = () => {
-    const handleFilesB = (e) => {
-      // change sideFilesT to true
-    }
-    return <input id="allFilesB" type='submit' value="Files" onChange={ handleFilesB }></input>
-  }
-
-  const AllNests = () => {
-    const handleNestsB = (e) => {
-      // change sideNestsT to true
-    }
-    return <input id="allNestsB" type='submit' value="Nests" onChange={ handleNestsB }></input>
-  }
   
   return (
-    <div id="sideBar">
-      < CreateB />
-      < AllTags />
-      < AllFiles />
-      < AllNests />
-    </div>
+    <>
+    {/* <div className='input-wrapper'>
+      <input className='search' placeholder='Search'></input>
+    </div> */}
+    <nav className='nav-side'>
+      <input className='search' placeholder='Search'></input>
+      <ul>
+        <li><Link to='/main/create' >Create</Link></li>
+        <li><Link to='/main/tags'>Tags</Link></li>
+        <li><Link to='/main/files'>Files</Link></li>
+        <li><Link to='/main/nests'>Nests</Link></li>
+      </ul>
+    </nav>
+    </>
   );
 }
 
