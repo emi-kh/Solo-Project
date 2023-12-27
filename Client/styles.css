@@ -48,7 +48,7 @@ a {
   gap: 1rem;
   padding: 2rem;
   cursor: pointer;
-  background: #efcb19;
+  /* background: #efcb19; */
   opacity: 90%;
   display: flex;
   justify-content: center;
@@ -59,28 +59,53 @@ a {
 .nav-side li:after {
   position: absolute;
 	background: white;
-  color: #44c977;
+  color: #090e0b;
   opacity:.5;
   transform: perspective(400px) rotateY(90deg);
 	transform-origin: 0 100%;
 	transition:all .4s ease-out;
 }
 
+.nav-side ul li:nth-child(1) { 
+	content: "Create";
+	line-height: 88px;
+  background: #efcb19;
+}
+.nav-side ul li:nth-child(2) { 
+	content: "Tags";
+	line-height: 88px;
+  background: #ef9d19;
+}
+.nav-side ul li:nth-child(3) { 
+	content: "Files";
+	line-height: 85px;
+  background: #ef196f;
+}
+
+.nav-side ul li:nth-child(4) { 
+	content: "Nests";
+	line-height: 70px;
+  background: #780b54;
+}
 .nav-side ul li:nth-child(1):after { 
 	content: "Create";
 	line-height: 88px;
+  background: #efcb19;
 }
 .nav-side ul li:nth-child(2):after { 
 	content: "Tags";
 	line-height: 88px;
+  background: #ef9d19;
 }
 .nav-side ul li:nth-child(3):after { 
 	content: "Files";
 	line-height: 85px;
+  background: #ef196f;
 }
 .nav-side ul li:nth-child(4):after { 
 	content: "Nests";
 	line-height: 70px;
+  background: #780b54;
 }
 
 .nav-side ul li:hover {
