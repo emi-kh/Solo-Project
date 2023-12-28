@@ -1,0 +1,45 @@
+@import './mixins';
+@import './variables';
+@import './splash';
+@import './nav';
+@import './create';
+
+*,*:before,*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fonts;
+  }
+  
+  :after {
+    content: "";
+  }
+
+body {
+  background-color: $darkBackground;
+  padding: $spacing;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: $prata;
+  font-weight: bold;
+}
+h4, h5, h6 {
+  font-family: $prata;
+  font-weight: lighter;
+}
+
+.wrapper-main {
+  display: flex;
+
+  .main {
+    height: 80vh;
+    width: 95%;
+    margin-left: auto;
+    color: $white;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+  }
+}

@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import SplashPage from './pages/splash.jsx';
 import Homepage from './pages/homepage.jsx';
+import NavBar from './components/navBar.jsx';
 import MainCHome from './containers/mainHome.jsx';
 import SideBar from './components/sideBar.jsx';
 import Create from './components/create.jsx';
@@ -16,14 +17,11 @@ import Nests from './components/nests.jsx';
 const App = () => {
   return (
     < >
+
     < Routes>
-      <Route path='/' element={< Homepage />} />
-      <Route path='/main' element={<MainCHome/>}>
-        <Route path='create' element={<Create/>} />
-        <Route path='tags' element={<Tags/>} />
-        <Route path='files' element={<Files/>} />
-        <Route path='nests' element={<Nests/>} />
-      </Route>
+      <Route path='/*' element={< Homepage />} />
+      {/* <Route path='/' element={<SplashPage />} />
+      <Route path='/NoteNest' element={<Homepage />} /> */}
     </Routes>
   </>
   )

@@ -14,16 +14,15 @@ const SideBar = () => {
   
   return (
     <>
-    {/* <div className='input-wrapper'>
+    <div className='search-wrapper'>
       <input className='search' placeholder='Search'></input>
-    </div> */}
+    </div>
     <nav className='nav-side'>
-      <input className='search' placeholder='Search'></input>
       <ul>
-        <li><Link to='/main/create' >Create</Link></li>
-        <li><Link to='/main/tags'>Tags</Link></li>
-        <li><Link to='/main/files'>Files</Link></li>
-        <li><Link to='/main/nests'>Nests</Link></li>
+        <li><Link to='/create' >Create</Link></li>
+        <li><Link to='/tags'>Tags</Link></li>
+        <li><Link to='/files'>Files</Link></li>
+        <li><Link to='/nests'>Nests</Link></li>
       </ul>
     </nav>
     </>

@@ -12,13 +12,12 @@ import MainCHome from '../containers/mainHome.jsx';
 
 const Homepage = () => {
   return (
-    <div >
+    <>
       < NavBar />
-    {/* <div id='sideBar'> */}
       < SideBar />
-    {/* </div> */}
-      {/* < MainCHome /> */}
-    </div>
+      <MainCHome />
+    </>
+
   );
 }
 

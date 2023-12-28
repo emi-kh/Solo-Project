@@ -4,15 +4,17 @@ import { Link, Route, Routes } from 'react-router-dom';
 const NavBar = () => {
 
   return (
-
+  <div className='wrapper-top'>
     <nav className="nav-top">
       <Link to="/" className="site-title">NoteNest</Link>
       <ul>
-        <li className='nav-topB'>
+        <li className='nav-top'>
           <Link to='/settings'>Settings</Link>
         </li>
       </ul>
     </nav> 
+  </div>
+
   );
 }
 

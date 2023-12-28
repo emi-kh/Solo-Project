@@ -1,0 +1,19 @@
+
+#splashMain {
+  @include flex-center();
+  background-image: url('../assets/splash-curved.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .enterB {
+    background-color: #FFD700;
+    padding: 10px 20px;
+    color: $white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+} 
+  
+
