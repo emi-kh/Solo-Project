@@ -21,7 +21,7 @@ const SplashPage = () => {
   return (
     <div id='splashMain'>
       {/* < LoginPage /> */}
-      <Link className='enterB' to='/NoteNest' >Enter</Link>
+      <Link className='enterB' to='/home' >Enter</Link>
       {/* <input className="enterB" type='submit' value="Enter" method="GET" action='/homepage' onClick={handleEnter}></input> */}
     </div> 
   );

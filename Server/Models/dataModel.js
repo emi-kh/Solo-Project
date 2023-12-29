@@ -33,7 +33,7 @@ const fileSchema = new Schema({
     ref: 'user'
   },
   tags: [],
-  collections: [],
+  nests: [],
   upload_date: {
     type: String,
     default: Date.now()
