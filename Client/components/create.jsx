@@ -8,7 +8,7 @@ const Create = () => {
   return (
     <div className='wrapper-create'>
       <h2 className='headerC'>Create File</h2>
-      <Form method='POST' action='/upload'>
+      {/* <Form method='POST' action='/upload'>
         <label>
           <span>File Name:</span>
           <input type='text' name='fileName' />
@@ -23,9 +23,9 @@ const Create = () => {
         </label>
         <button>Submit</button>
 
-        {/* {data && data.error && <p>{data.error}</p>} */}
+        {data && data.error && <p>{data.error}</p>}
       
-      </Form>
+      </Form> */}
     </div>
 
   )

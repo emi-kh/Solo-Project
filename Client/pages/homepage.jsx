@@ -8,7 +8,7 @@ import MainCHome from '../containers/mainHome.jsx';
 // nav bar top
 // timeline- under nav bar, stretch feature
 
-// side bar- all files, all tags, collections
+// side bar- all files, all tags, nests
 
 const Homepage = () => {
   return (
