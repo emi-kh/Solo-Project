@@ -17,15 +17,15 @@ import Nests from './components/nests.jsx';
 const App = () => {
   return (
     < >
-      
-    < Routes>
-      <Route path='/*' element={< Homepage />} />
+      < Homepage />
+    {/* < Routes> */}
+      {/* <Route path='/*' element={< Homepage />} /> */}
       {/* <Route path='/' element={<SplashPage />} />
       <Route path='/NoteNest' element={<Homepage />} /> */}
       {/* <Route path='/upload' element={<Create/>} action={uploadAction}/> */}
 
-
-    </Routes>
+{/* 
+    </Routes> */}
   </>
   )
 }

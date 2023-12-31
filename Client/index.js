@@ -10,6 +10,38 @@ import SplashPage from './pages/splash.jsx';
 import LoginPage from './components/login.jsx';
 // import SplashPage from './pages/splash.jsx';
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='/*' element={ <App /> } />
+      
+      {/* <Route path='/upload' element={<Create />} action={uploadAction}/> */}
+    </>
+  )
+);
+
+const root = createRoot(document.querySelector('#root'));
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+); 
+
+// const root = createRoot(document.querySelector('#root'));
+// root.render(
+//   <BrowserRouter>
+//     <App/>
+//   </BrowserRouter>
+// ); 
+
+// Also works, solution from Charlie:
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log('line 9 index.js: ', document.querySelector('body'));
+//     const root = createRoot(document.querySelector('#root'));
+//     root.render(<App />,); 
+// });
+
+
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
 //     <>
@@ -20,27 +52,6 @@ import LoginPage from './components/login.jsx';
 //     </>
 //   )
 // );
-
-// const root = createRoot(document.querySelector('#root'));
-// root.render(
-//   <React.StrictMode>
-//     <RouterProvider router={router} />
-//   </React.StrictMode>
-// ); 
-
-const root = createRoot(document.querySelector('#root'));
-root.render(
-  <BrowserRouter>
-    <App/>
-  </BrowserRouter>
-); 
-
-// Also works, solution from Charlie:
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('line 9 index.js: ', document.querySelector('body'));
-//     const root = createRoot(document.querySelector('#root'));
-//     root.render(<App />,); 
-// });
 
 
 //Rick's approach. need redux and custom login function

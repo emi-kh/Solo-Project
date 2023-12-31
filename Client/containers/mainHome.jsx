@@ -17,11 +17,6 @@ const MainCHome = () => {
     <>
     <div className='wrapper-main'>
       <div className='main'>
-        {/* <Create />
-        <Tags />
-        <Files />
-        <Nests /> */}
-
         <Routes>
           <Route path='create' element={<Create/>} />
           <Route path='tags' element={<Tags/>} />
