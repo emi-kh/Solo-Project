@@ -10,16 +10,40 @@ const useInput = init => {
   return [ value, onChange ];
 };
 
-const Create = () => {
-
+const Create = (props) => {
+  const [ fileName, nameOnChange ] = useInput('');
+  const [tags, tagsOnChange] = useInput('');
+  const [ nests, nestsOnChange ] = useInput('');
+  const [ notes, notesOnChange ] = useInput('');
 
   return (
-    <div className='wrapper-create'>
-      <h2 className='headerC'>Create File</h2>
-
-    </div>
+    <section className='wrapper-create'>
+      <h2 className='headerC'>Create New Note</h2>
+      <article className='card-create'>
+        <div className='create-container'>
+          <label htmlFor='upload'>Upload: </label>
+        </div>
+        <div className='create-container'>
+          <label htmlFor='fileName'> File Name: </label>
+          <input name="fileName" placeholder="file 1" value={fileName} onChange={nameOnChange} />
+        </div>
+        <div className='create-container'>
+          <label htmlFor='tags'> Tags: </label>
+          <input name="tags" placeholder="recipes" value={tags} onChange={tagsOnChange} />
+        </div>
+        <div className='create-container'>
+          <label htmlFor='nests'> Nests: </label>
+          <input name="nests" placeholder="My Nest" value={nests} onChange={nestsOnChange} />
+        </div>
+        <div className='create-container'>
+          <label htmlFor='notes'> Notes: </label>
+          <input name="notes" placeholder="Today I discovered...." value={notes} onChange={notesOnChange} />
+        </div>
+      </article>
+    </section>
   )
 }
+
 
 export default Create;
 
