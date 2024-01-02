@@ -1,3 +1,5 @@
+const models = require('../models/dataModel');
+
 const fileController = {};
 
 // get middleware: 
@@ -6,6 +8,25 @@ const fileController = {};
 
 // post middleware:
 // create new file- name, thumbnail photo, userID, path, tags, collections, uploadDate, type?, notes text? background color (css)? 
+fileController.Upload = (req, res, next) => {
+  const {fileName, tags, nests, notes} = req.body;
+
+  models.File.create({
+    fileName, tags, nests, notes
+  })
+    .then(fileDoc => {
+      res.locals.file = fileDoc;
+      next();
+    })
+    .catch(err => {
+      const errObj = {
+        log: 'Error occurred in fileController.Upload middleware',
+        message: {err: `Error in fileController.Upload: ${err}`}
+      };
+      next(errObj);
+    });
+};
+
 
 // patch middleware:
 // change name, change notes text, thumbnail photo, change color

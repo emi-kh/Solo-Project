@@ -1,5 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Form, redirect, useActionData } from 'react-router-dom';
+
+//require Users, Tags, and Nests data from database
+// const userData = require()
+// const tagData = require()
 
 const useInput = init => {
   const [ value, setValue ] = useState(init);
@@ -12,9 +16,72 @@ const useInput = init => {
 
 const Create = (props) => {
   const [ fileName, nameOnChange ] = useInput('');
-  const [tags, tagsOnChange] = useInput('');
+  // const [tags, setTags] = useState({});
   const [ nests, nestsOnChange ] = useInput('');
   const [ notes, notesOnChange ] = useInput('');
+  const [ nameError, setNameError ] = useState(null);
+
+  // useEffect to clear nameError when `name` is changed
+  useEffect(()=>{
+    setNameError(null);
+  }, [fileName]);
+
+  // const handleFilmCheck = e => {
+  //   const idx = e.target.value;
+  //   const newFilmSet = {...filmSet};
+  //   if (newFilmSet[idx]) delete newFilmSet[idx];
+  //   else newFilmSet[idx] = true;
+  //   setFilmSet(newFilmSet);
+  // };
+
+  // const filmCheckboxes = filmsData.map((filmObj, idx) => {
+  //   return (
+  //     <div key={idx} className="checkboxWithLabel">
+  //       <input type="checkbox" className="filmCheckbox" value={idx} onChange={handleFilmCheck}></input>
+  //       <span className="checkboxLabel">{filmObj.title}</span>
+  //     </div>
+  //   );
+  // });
+
+  const saveNote = () => {
+    if (fileName === '') {
+      setNameError('required');
+    } else {
+      const tags = [];
+      for (const idx in tags) {
+        tags.push({
+          userId: filmsData[idx].title,
+          files: filmsData[idx]._id
+        });
+      }
+    }
+
+    const body = {
+      fileName,
+      // userId: ,
+      tags,
+      nests,
+      notes
+    }
+
+    fetch('/file/upload', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'Application/JSON'
+      },
+      body: JSON.stringify(body)
+      })
+      .then(resp => resp.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .then(() => {
+        props.history.push('/');
+      })
+      .catch(err => console.log('Create fetch /api/fileUpload: ERROR: ', err));
+    }
+
+
 
   return (
     <section className='wrapper-create'>
@@ -26,11 +93,12 @@ const Create = (props) => {
         <div className='create-container'>
           <label htmlFor='fileName'> File Name: </label>
           <input name="fileName" placeholder="file 1" value={fileName} onChange={nameOnChange} />
+          {nameError ? (<span className="errorMsg">{nameError}</span>) : null}
         </div>
-        <div className='create-container'>
+        {/* <div className='create-container'>
           <label htmlFor='tags'> Tags: </label>
           <input name="tags" placeholder="recipes" value={tags} onChange={tagsOnChange} />
-        </div>
+        </div> */}
         <div className='create-container'>
           <label htmlFor='nests'> Nests: </label>
           <input name="nests" placeholder="My Nest" value={nests} onChange={nestsOnChange} />
@@ -39,10 +107,13 @@ const Create = (props) => {
           <label htmlFor='notes'> Notes: </label>
           <input name="notes" placeholder="Today I discovered...." value={notes} onChange={notesOnChange} />
         </div>
+        <div className='submit-container'>
+          <button type="button" className="createBtn" onClick={saveNote}>Create</button>
+        </div>
       </article>
     </section>
   )
-}
+};
 
 
 export default Create;

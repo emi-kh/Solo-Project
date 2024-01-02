@@ -27,11 +27,11 @@ const User = mongoose.model('user', userSchema);
 
 // files schema- add thumb nail photo file, background color for css? spotify api in notes section?
 const fileSchema = new Schema({
-  filename: {type: String, required: true},
-  userId: {
-    type: Schema.Types.ObjectId,
-    ref: 'user'
-  },
+  fileName: {type: String, required: true},
+  // userId: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'user'
+  // },
   tags: [],
   nests: [],
   upload_date: {
@@ -61,7 +61,7 @@ const tagSchema = new Schema({
 const Tag = mongoose.model('tag', tagSchema);
 
 // collections schema
-const collectionSchema = new Schema({
+const nestSchema = new Schema({
   name: {type: String, required: true}, 
   userId: {
     type: Schema.Types.ObjectId,
@@ -69,13 +69,13 @@ const collectionSchema = new Schema({
   },
 });
 
-const Collection = mongoose.model('collection', collectionSchema);
+const Nest = mongoose.model('nest', nestSchema);
 
 // export modules to be used in routes/controllers
 module.exports = {
   User,
   File,
   Tag,
-  Collection
+  Nest
 };
 
