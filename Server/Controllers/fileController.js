@@ -8,6 +8,7 @@ fileController.GetAll = (req, res, next) => {
   models.File.find().exec()
     .then(fileDocs => {
       res.locals.allFiles = fileDocs;
+      console.log('fileCoontroller line 11: ', res.locals.allFiles);
       return next();
     })
     .catch(err => {

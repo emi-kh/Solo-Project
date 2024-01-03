@@ -6,7 +6,7 @@ import React, {useState} from 'react';
 const Files = () => {
   const [files, setFiles] = useState([]);
 
-  fetch('/api/files/getFiles')
+  fetch('/api/file/getFiles')
   .then(data => json(data))
   .then(files => {
     const filesComp = setFiles.map((file, index) => {
