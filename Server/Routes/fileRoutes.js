@@ -6,7 +6,7 @@ const fileController = require('../controllers/fileController');
 // get req file by Id or name?
 
 // get all files
-router.get('/allFiles', (req, res) => {
+router.get('/allFiles', fileController.GetAll, (req, res) => {
   return res.status(200).json(res.locals.allFiles);
 });
 

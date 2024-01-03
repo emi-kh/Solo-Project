@@ -5,10 +5,10 @@ const fileController = {};
 // get middleware: 
 // get all files
 fileController.GetAll = (req, res, next) => {
-  models.File.find().exec()
+  models.File.find({}).exec()
     .then(fileDocs => {
       res.locals.allFiles = fileDocs;
-      console.log('fileCoontroller line 11: ', res.locals.allFiles);
+      // console.log('fileController line 11: ', res.locals.allFiles);
       return next();
     })
     .catch(err => {
