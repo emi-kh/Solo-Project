@@ -9,10 +9,11 @@ const fileController = {};
 // post middleware:
 // create new file- name, thumbnail photo, userID, path, tags, collections, uploadDate, type?, notes text? background color (css)? 
 fileController.Upload = (req, res, next) => {
-  const {fileName, tags, nests, notes} = req.body;
+//   const {fileName, tags, nests, notes} = req.body;
+  const {fileName, notes} = req.body;
 
   models.File.create({
-    fileName, tags, nests, notes
+    fileName, notes
   })
     .then(fileDoc => {
       res.locals.file = fileDoc;

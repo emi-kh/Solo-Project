@@ -4,8 +4,8 @@ const mongoURI = 'mongodb+srv://emi-kh:SBM4qh9ixbeOn8Yt@main.58wjzdd.mongodb.net
 
 mongoose.connect(mongoURI, {
   // options for the connect method to parse the URI
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
   // sets the name of the DB that our collections are part of
   dbName: 'NoteNestDB'
 })
@@ -32,14 +32,15 @@ const fileSchema = new Schema({
   //   type: Schema.Types.ObjectId,
   //   ref: 'user'
   // },
-  tags: [],
-  nests: [],
+  // tags: [],
+  // nests: [],
+  notes: String,
   upload_date: {
     type: String,
     default: Date.now()
   },
-  type: String,
-  path: {type: String, required: true},
+  // type: String,
+  // path: {type: String, required: true},
 });
 
 const File = mongoose.model('file', fileSchema);

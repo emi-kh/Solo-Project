@@ -34,10 +34,10 @@ app.use('/homepage', (req, res) => {
 
 
 // Routes
-app.use('/users', userRoutes);
-app.use('/file', fileRoutes);
-app.use('/tag', tagRoutes);
-app.use('/nest', nestRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/file', fileRoutes);
+app.use('/api/tag', tagRoutes);
+app.use('/api/nest', nestRoutes);
 
 
 // Catch-all route handler

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { Form, redirect, useActionData } from 'react-router-dom';
 
+import Success from './success';
+
 //require Users, Tags, and Nests data from database
 // const userData = require()
 // const tagData = require()
@@ -17,11 +19,11 @@ const useInput = init => {
 const Create = (props) => {
   const [ fileName, nameOnChange ] = useInput('');
   // const [tags, setTags] = useState({});
-  const [ nests, nestsOnChange ] = useInput('');
+  // const [ nests, nestsOnChange ] = useInput('');
   const [ notes, notesOnChange ] = useInput('');
   const [ nameError, setNameError ] = useState(null);
 
-  // useEffect to clear nameError when `name` is changed
+  // useEffect to clear nameError when `fileName` is changed
   useEffect(()=>{
     setNameError(null);
   }, [fileName]);
@@ -44,27 +46,27 @@ const Create = (props) => {
   // });
 
   const saveNote = () => {
-    if (fileName === '') {
-      setNameError('required');
-    } else {
-      const tags = [];
-      for (const idx in tags) {
-        tags.push({
-          userId: filmsData[idx].title,
-          files: filmsData[idx]._id
-        });
-      }
-    }
+    // if (fileName === '') {
+    //   setNameError('required');
+    // } else {
+    //   const tags = [];
+    //   for (const idx in tags) {
+    //     tags.push({
+    //       userId: filmsData[idx].title,
+    //       files: filmsData[idx]._id
+    //     });
+    //   }
+    // }
 
     const body = {
       fileName,
       // userId: ,
-      tags,
-      nests,
+      // tags,
+      // nests,
       notes
     }
 
-    fetch('/file/upload', {
+    fetch('/api/file/upload', {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/JSON'
@@ -74,10 +76,13 @@ const Create = (props) => {
       .then(resp => resp.json())
       .then((data) => {
         console.log(data);
+        return (
+          <Success fileName={data.file} />
+        )
       })
-      .then(() => {
-        props.history.push('/');
-      })
+      // .then(() => {
+      //   props.history.push('/');
+      // })
       .catch(err => console.log('Create fetch /api/fileUpload: ERROR: ', err));
     }
 
@@ -99,16 +104,16 @@ const Create = (props) => {
           <label htmlFor='tags'> Tags: </label>
           <input name="tags" placeholder="recipes" value={tags} onChange={tagsOnChange} />
         </div> */}
-        <div className='create-container'>
+        {/* <div className='create-container'>
           <label htmlFor='nests'> Nests: </label>
           <input name="nests" placeholder="My Nest" value={nests} onChange={nestsOnChange} />
-        </div>
+        </div> */}
         <div className='create-container'>
           <label htmlFor='notes'> Notes: </label>
-          <input name="notes" placeholder="Today I discovered...." value={notes} onChange={notesOnChange} />
+          <textarea name="notes" placeholder="Today I discovered...." value={notes} onChange={notesOnChange} />
         </div>
         <div className='submit-container'>
-          <button type="button" className="createBtn" onClick={saveNote}>Create</button>
+          <button type="button" className="createBtn" rows='10' onClick={saveNote}>Create</button>
         </div>
       </article>
     </section>

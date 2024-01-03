@@ -7,7 +7,7 @@ const fileController = require('../controllers/fileController');
 
 // post request file upload
 router.post('/upload', fileController.Upload, (req, res) => {
-  return res.status(200).json({});
+  return res.status(200).json(res.locals.file);
 });
 
 // patch request change file. Could have multiple conidtionals or different controllers for changing file name, notes section, associated tags, associated collections?
