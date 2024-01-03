@@ -4,6 +4,20 @@ const fileController = {};
 
 // get middleware: 
 // get all files
+fileController.GetAll = (req, res, next) => {
+  models.File.find().exec()
+    .then(fileDocs => {
+      res.locals.allFiles = fileDocs;
+      return next();
+    })
+    .catch(err => {
+      const errObj = {
+        log: 'Error occurred in fileController.GetAll middleware',
+        message: {err: `Error in fileController.GetAll: ${err}`}
+      };
+      next(errObj);
+    });
+};
 // get specific file and all associated tags, notes
 
 // post middleware:

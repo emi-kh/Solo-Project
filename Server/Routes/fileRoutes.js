@@ -5,6 +5,11 @@ const fileController = require('../controllers/fileController');
 
 // get req file by Id or name?
 
+// get all files
+router.get('/allFiles', (req, res) => {
+  return res.status(200).json(res.locals.allFiles);
+});
+
 // post request file upload
 router.post('/upload', fileController.Upload, (req, res) => {
   return res.status(200).json(res.locals.file);
