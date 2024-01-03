@@ -6,6 +6,8 @@ import Create from '../components/create.jsx';
 import Tags from '../components/tags.jsx';
 import Files from '../components/files.jsx';
 import Nests from '../components/nests.jsx';
+import Success from '../components/success.jsx';
+import CurrNote from '../components/currNote.jsx';
 
 // main container- upload a file: changes to all files, tags or collections when side bar buttons are clicked
 
@@ -19,6 +21,8 @@ const MainCHome = () => {
       <div className='main'>
         <Routes>
           <Route path='create' element={<Create/>} />
+          <Route path='success' element={<Success/>} />
+          <Route path='currNote' element={<CurrNote />}/>
           <Route path='tags' element={<Tags/>} />
           <Route path='files' element={<Files/>} />
           <Route path='nests' element={<Nests/>} />

@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Form, redirect, useActionData } from 'react-router-dom';
-
-import Success from './success';
+import { useNavigate } from 'react-router-dom';
 
 //require Users, Tags, and Nests data from database
 // const userData = require()
@@ -17,6 +15,8 @@ const useInput = init => {
 };
 
 const Create = (props) => {
+  const navigate = useNavigate();
+
   const [ fileName, nameOnChange ] = useInput('');
   // const [tags, setTags] = useState({});
   // const [ nests, nestsOnChange ] = useInput('');
@@ -76,22 +76,20 @@ const Create = (props) => {
       .then(resp => resp.json())
       .then((data) => {
         console.log(data);
-        return (
-          <Success fileName={data.file} />
-        )
+        navigate('/success')
       })
-      // .then(() => {
-      //   props.history.push('/');
-      // })
       .catch(err => console.log('Create fetch /api/fileUpload: ERROR: ', err));
     }
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  // }
 
 
   return (
     <section className='wrapper-create'>
       <h2 className='headerC'>Create New Note</h2>
-      <article className='card-create'>
+      <form className='form-create'>
         <div className='create-container'>
           <label htmlFor='upload'>Upload: </label>
         </div>
@@ -115,7 +113,7 @@ const Create = (props) => {
         <div className='submit-container'>
           <button type="button" className="createBtn" rows='10' onClick={saveNote}>Create</button>
         </div>
-      </article>
+      </form>
     </section>
   )
 };

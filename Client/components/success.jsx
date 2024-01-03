@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Success = ({fileName}) => {
+const Success = () => {
 
   return (
     <section className='wrapper-create'>
       <label className='success'>
-        <h2>File: {fileName} uploaded successfully</h2>
+        <h2>Note upload successful</h2>
       </label>
     </section>
   )
