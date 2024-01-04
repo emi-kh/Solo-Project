@@ -17,13 +17,13 @@ const Files = () => {
       console.log(`Error occured in fetch get allFiles request client side files.jsx: ${err}`)
     })
   }, []);
-  if (files) console.log('files.jsx line 27: ', files);
+  // if (files) console.log('files.jsx line 27: ', files);
 
   return (
       <div className='wrapper-files'>
         <h2>Files Component</h2>
         {files.map((file, index) => (
-          < NoteButton id={file._id} noteName={file.fileName} noteText={file.notes} />
+          < NoteButton id={file._id} noteName={file.fileName} noteText={file.notes} key={file._id}/>
         ))}
       </div>
   )

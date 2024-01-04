@@ -8,9 +8,19 @@ const CurrNote = () => {
   const location = useLocation();
   const {noteId, noteName, noteText} = location.state;
 
+  const body = {
+    id: noteId
+  }
+
   //delete note button
   const deleteNote = () => {
-    fetch('/api/file/delete')
+    fetch('/api/file/delete', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'Application/JSON'
+      },
+      body: JSON.stringify(body)
+    })
     .then(doc => doc.json())
     .then(doc => {
       navigate('/deleteSuccess')
