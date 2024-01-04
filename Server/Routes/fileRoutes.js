@@ -20,6 +20,9 @@ router.post('/upload', fileController.Upload, (req, res) => {
 // delete req file deleted
 // modelName.findByIdandDelete(req.params.id)
 // then return res.json(modelName)
+router.delete('/delete', fileController.Delete, (req, res) => {
+  return res.status(200).json(res.locals.deleted);
+});
 
 // Export router
 module.exports = router;

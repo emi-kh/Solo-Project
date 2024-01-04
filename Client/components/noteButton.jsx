@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NoteButton = ({id, noteName}) => {
+const NoteButton = ({id, noteName, noteText}) => {
   
   const noteState = {
     noteId: id,
-    noteName: noteName
+    noteName: noteName,
+    noteText: noteText
   }
   return (
-    <label className="noteButton">
+    <div style={{height: '100px', width: '100px', background: 'white'}} className="noteButton">
       <Link to='/currNote' state={noteState}>{noteName}</Link>
-    </label>
+    </div>
   )
 }
 

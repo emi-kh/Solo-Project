@@ -53,5 +53,25 @@ fileController.Upload = (req, res, next) => {
 // middleware for if tag deletes file?
 // if collection deletes file?
 
+// modelName.findByIdandDelete(req.params.id)
+fileController.Delete = (req, res, next) => {
+  const id = req.params.id;
+
+  File.findByIdandDelete(id, (err, doc) => {
+    if (err) {
+      const errObj = {
+        log: 'Error in fileController.Delete line 61:',
+        message: {err: `Error in fileController.Delete line 61: ${err}`}
+      };
+      next(errObj);
+    } else {
+      console.log('Deleted: ', doc);
+      res.locals.deleted = doc;
+      next();
+    }
+  });
+
+};
+
 // Export controller
 module.exports = fileController;
