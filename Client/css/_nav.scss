@@ -1,7 +1,5 @@
 .wrapper-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  @include flex-center();
 
   .nav-top {
     // background-color: $navy;
@@ -9,9 +7,14 @@
     gap: 1rem;
     padding: 1rem;
     width: 100%;
+    height: 15vh;
+    background-image: url('../assets/NoteNest-banner.png');
+    background-position: center;
+    background-size:cover;
+
     .site-title {
       font-size: 3rem;
-      // justify-content: center !important;
+      margin-left: 40%;
     }
   
     ul {

@@ -39,10 +39,12 @@ h4, h5, h6 {
     height: 80vh;
     width: 95%;
     margin-left: auto;
+    margin-top: 0;
+    padding: 0;
     color: $white;
-    border-style: solid;
-    border-color: white;
-    border-width: 5px;
+    // border-style: solid;
+    // border-color: white;
+    // border-width: 5px;
     // background-image: url('../assets/splash-curved-dim.jpeg');
     // background-position: center;
   }

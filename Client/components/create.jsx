@@ -85,7 +85,7 @@ const Create = (props) => {
           <label htmlFor='upload'>Upload: </label>
         </div> */}
         <div className='createC'>
-          <label htmlFor='fileName'> Note Title: </label>
+          <label htmlFor='fileName' className='noteTitle'> Note Title: </label>
           <input name="fileName" placeholder="file 1" value={fileName} onChange={nameOnChange} />
           {nameError ? (<span className="errorMsg">{nameError}</span>) : null}
         </div>

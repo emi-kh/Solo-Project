@@ -7,11 +7,11 @@ const NavBar = () => {
   <div className='wrapper-top'>
     <nav className="nav-top">
       <Link to="/" className="site-title">NoteNest</Link>
-      <ul>
+      {/* <ul>
         <li className='nav-top'>
           <Link to='/settings'>Settings</Link>
         </li>
-      </ul>
+      </ul> */}
     </nav> 
   </div>
 
