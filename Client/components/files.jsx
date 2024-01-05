@@ -21,10 +21,12 @@ const Files = () => {
 
   return (
       <div className='wrapper-files'>
-        <h2>Files Component</h2>
-        {files.map((file, index) => (
-          < NoteButton id={file._id} noteName={file.fileName} noteText={file.notes} key={file._id}/>
-        ))}
+        <h2 className='main-title'>Files Component</h2>
+        <div className='noteButtonC'>
+          {files.map((file, index) => (
+            < NoteButton id={file._id} noteName={file.fileName} noteText={file.notes} key={file._id}/>
+          ))}
+        </div>
       </div>
   )
 

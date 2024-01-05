@@ -10,10 +10,12 @@ const NoteButton = ({id, noteName, noteText, key}) => {
     key: key
   }
   return (
-    <div style={{height: '100px', width: '100px', background: 'white'}} className="noteButton">
-      <Link to='/currNote' state={noteState}>{noteName}</Link>
+    <div>
+      <Link to='/currNote' state={noteState} className="noteButton">{noteName}</Link>
     </div>
   )
 }
 
 export default NoteButton
+
+// style={{height: '100px', width: '100px', background: 'white'}}

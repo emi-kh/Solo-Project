@@ -1,0 +1,14 @@
+.wrapper-files {
+  @include flex-center();
+
+    .noteButton {
+      height: 1rem;
+      width: 1rem;
+      border-radius: 25%;
+      background-color: $white;
+      opacity: 50%;
+      border-style: solid;
+      border-color: $lightGreen;
+    }
+
+}
