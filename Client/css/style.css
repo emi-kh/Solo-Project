@@ -174,6 +174,7 @@
   background-color: #f6f2f7;
   border-style: solid;
   border-color: #01efac;
+  border-width: 7px;
   z-index: 3;
   padding-top: 2rem;
   margin: auto;
@@ -242,8 +243,6 @@ h4, h5, h6 {
   border-style: solid;
   border-color: white;
   border-width: 5px;
-  background-image: url("../assets/splash-curved-dim.jpeg");
-  background-position: center;
 }
 
 .link-sidebar {
