@@ -53,25 +53,91 @@ fileController.Upload = (req, res, next) => {
 // middleware for if tag deletes file?
 // if collection deletes file?
 
-// modelName.findByIdandDelete(req.params.id)
-fileController.Delete = (req, res, next) => {
-  const id = req.params.id;
 
-  File.findByIdandDelete(id, (err, doc) => {
-    if (err) {
+// fileController.Delete = (req, res, next) => {
+//   const id = req.body.id;
+//   console.log('filecontroller.Delete line 59 id: ', id);
+//   File.findByIdandDelete(id, (err, doc) => {
+//     if (err) {
+//       const errObj = {
+//         log: 'Error in fileController.Delete line 61:',
+//         message: {err: `Error in fileController.Delete line 61: ${err}`}
+//       };
+//       next(errObj);
+//     } else {
+//       console.log('Deleted: ', doc);
+//       res.locals.deleted = doc;
+//       next();
+//     }
+//   });
+// };
+
+// fileController.Delete = (req, res, next) => {
+//   const id = req.body.id;
+//   console.log('filecontroller.Delete line 59 id: ', id);
+//   models.File.findOneandDelete({ _id: id }, (err, doc) => {
+//     if (err) {
+//       const errObj = {
+//         log: 'Error in fileController.Delete line 61:',
+//         message: {err: `Error in fileController.Delete line 61: ${err}`}
+//       };
+//       next(errObj);
+//     } else {
+//       console.log('Deleted: ', doc);
+//       res.locals.deleted = doc;
+//       next();
+//     }
+//   });
+
+// };
+
+// fileController.Delete = (req, res, next) => {
+//   const id = req.body.id;
+//   console.log('filecontroller.Delete line 96 id: ', id);
+//   models.File.find()
+//     .then(data => {
+//       console.log('line 99 filecontroller.delete: ', data);
+//     });
+
+//   models.File.findOneandDelete({ _id: {id} })
+//     .then(doc => {
+//       console.log('Deleted: ', doc);
+//       res.locals.deleted = doc;
+//       next();  
+//     })
+//     .catch(err => {
+//       const errObj = {
+//         log: 'Error in fileController.Delete line 105:',
+//         message: {err: `Error in fileController.Delete line 61: ${err}`}
+//       };
+//       next(errObj);
+//     });
+// };
+
+fileController.Delete = (req, res, next) => {
+  const id = req.body.id;
+  // console.log('filecontroller.Delete line 119 id: ', id);
+  // models.File.find()
+  //   .then(data => {
+  //     console.log('line 99 filecontroller.delete: ', data);
+  //   });
+
+  models.File.deleteOne( { _id: id } )
+    .then(doc => {
+      console.log('Deleted: ', doc);
+      res.locals.deleted = doc;
+      next();  
+    })
+    .catch(err => {
       const errObj = {
-        log: 'Error in fileController.Delete line 61:',
+        log: 'Error in fileController.Delete line 105:',
         message: {err: `Error in fileController.Delete line 61: ${err}`}
       };
       next(errObj);
-    } else {
-      console.log('Deleted: ', doc);
-      res.locals.deleted = doc;
-      next();
-    }
-  });
-
+    });
 };
+
+
 
 // Export controller
 module.exports = fileController;

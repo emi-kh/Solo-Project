@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NoteButton = ({id, noteName, noteText, key}) => {
+const NoteButton = ({id, noteName, noteText}) => {
   
   const noteState = {
     noteId: id,
     noteName: noteName,
     noteText: noteText,
-    key: key
   }
   return (
-    <div>
-      <Link to='/currNote' state={noteState} className="noteButton">{noteName}</Link>
+    // <React.Fragment className="noteButton">
+    // <Link to='/currNote' state={noteState} className="link">{noteName}</Link>
+    // </React.Fragment>
+    <div className="noteButton">
+      <Link to='/currNote' key={id} state={noteState} className="link-notes">{noteName}</Link>
     </div>
   )
 }

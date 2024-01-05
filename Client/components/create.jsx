@@ -46,17 +46,6 @@ const Create = (props) => {
   // });
 
   const saveNote = () => {
-    // if (fileName === '') {
-    //   setNameError('required');
-    // } else {
-    //   const tags = [];
-    //   for (const idx in tags) {
-    //     tags.push({
-    //       userId: filmsData[idx].title,
-    //       files: filmsData[idx]._id
-    //     });
-    //   }
-    // }
 
     const body = {
       fileName,
@@ -88,13 +77,15 @@ const Create = (props) => {
 
   return (
     <section className='wrapper-create'>
-      <h2 className='headerC'>Create New Note</h2>
-      <form className='form-create'>
-        <div className='create-container'>
+      <div className='titleCreateC'>
+        <h2 className='titleCreate'>Create New Note</h2>
+      </div>
+      <form className='formCreate'>
+        {/* <div className='createC'>
           <label htmlFor='upload'>Upload: </label>
-        </div>
-        <div className='create-container'>
-          <label htmlFor='fileName'> File Name: </label>
+        </div> */}
+        <div className='createC'>
+          <label htmlFor='fileName'> Note Title: </label>
           <input name="fileName" placeholder="file 1" value={fileName} onChange={nameOnChange} />
           {nameError ? (<span className="errorMsg">{nameError}</span>) : null}
         </div>
@@ -106,11 +97,11 @@ const Create = (props) => {
           <label htmlFor='nests'> Nests: </label>
           <input name="nests" placeholder="My Nest" value={nests} onChange={nestsOnChange} />
         </div> */}
-        <div className='create-container'>
-          <label htmlFor='notes'> Notes: </label>
-          <textarea name="notes" placeholder="Today I discovered...." value={notes} onChange={notesOnChange} />
+        <div className='createC'>
+          <label className='labelTextArea' htmlFor='notes'> Notes: </label>
+          <textarea name="notes" className='notesTextArea' placeholder="Today I discovered...." value={notes} onChange={notesOnChange} />
         </div>
-        <div className='submit-container'>
+        <div className='submitC'>
           <button type="button" className="createBtn" rows='10' onClick={saveNote}>Create</button>
         </div>
       </form>

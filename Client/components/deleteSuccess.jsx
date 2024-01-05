@@ -4,9 +4,9 @@ const DeleteSuccess = () => {
 
   return (
     <section className='wrapper-currNote'>
-      <label className='success'>
+      <div className='success'>
         <h2>Note has been deleted</h2>
-      </label>
+      </div>
     </section>
   )
 }

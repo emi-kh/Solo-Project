@@ -1,0 +1,48 @@
+// .wrapper-create {
+//     background-image: url('../assets/splash-curved-dim.jpeg');
+//     background-position: center;
+// }
+.titleCreateC {
+    @include flex-center();
+    margin: 5vh;
+    background-color: black;
+    opacity: 70%;
+    border-radius: 50%;
+    // min-width: 0;
+    // width: 25%;
+
+}
+
+.formCreate {
+    @include flex-center();
+    flex-direction: column;
+    background-color: black;
+    opacity: 70%;
+    border-radius: 50%;
+
+    .createC {
+        margin: 2rem;
+    }
+
+    .submitC {
+        margin: 1rem;
+        background-color: black;
+        opacity: 70%;
+        border-radius: 50%;
+    }
+
+    .createBtn {
+        height: 10vh;
+        width: 15vh;
+        border-radius: 50%;
+    }
+
+    .notesTextArea {
+        height: 20vh;
+        width: 30vh;
+    }
+
+    .labelTextArea {
+        gap: 2rem;
+    }
+}

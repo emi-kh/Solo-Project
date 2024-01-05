@@ -20,14 +20,16 @@ const Files = () => {
   // if (files) console.log('files.jsx line 27: ', files);
 
   return (
-      <div className='wrapper-files'>
-        <h2 className='main-title'>Files Component</h2>
-        <div className='noteButtonC'>
+    <>
+      <div className='titleC'>
+        <h2 className='main-title'>Notes</h2>
+      </div>
+      <div className='noteButtonC'>
           {files.map((file, index) => (
             < NoteButton id={file._id} noteName={file.fileName} noteText={file.notes} key={file._id}/>
           ))}
-        </div>
       </div>
+    </>
   )
 
 }

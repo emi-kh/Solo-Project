@@ -4,6 +4,7 @@
 @import './nav';
 @import './create';
 @import './notes';
+@import './currNote';
 
 
 *,*:before,*:after {
@@ -33,7 +34,6 @@ h4, h5, h6 {
 }
 
 .wrapper-main {
-  display: flex;
 
   .main {
     height: 80vh;
@@ -43,5 +43,23 @@ h4, h5, h6 {
     border-style: solid;
     border-color: white;
     border-width: 5px;
+    background-image: url('../assets/splash-curved-dim.jpeg');
+    background-position: center;
   }
+}
+
+.link-sidebar{
+  text-decoration: none;
+  @include flex-center();
+  color: $white;
+  font-size: 2rem;
+  // outline-style: solid;
+  // outline-color: black;
+  text-shadow: 0 0 3px $navy;
+}
+
+.link-notes {
+  text-decoration: none;
+  @include flex-center();
+  color: $navy;
 }

@@ -1,0 +1,20 @@
+
+  .currHeadC {
+    @include flex-center();
+    margin: 10vh;
+  }
+
+  .currTextC {
+    @include flex-center();
+    margin: 25vh;
+  }
+
+  .currDeleteC {
+    @include flex-center();
+    margin: 30vh;
+  }
+
+  .success {
+    @include flex-center();
+    margin: 25vh;
+  }

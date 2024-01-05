@@ -19,11 +19,10 @@
 
 .wrapper-top {
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .wrapper-top .nav-top {
-  background-color: #050c26;
   color: #f6f2f7;
   gap: 1rem;
   padding: 1rem;
@@ -79,6 +78,7 @@
   padding: 2rem;
   cursor: pointer;
   opacity: 90%;
+  box-shadow: 0px 0px 5px #050c26;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,6 +110,103 @@
   background: #780b54;
 }
 
+.titleCreateC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5vh;
+  background-color: black;
+  opacity: 70%;
+  border-radius: 50%;
+}
+
+.formCreate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  opacity: 70%;
+  border-radius: 50%;
+}
+.formCreate .createC {
+  margin: 2rem;
+}
+.formCreate .submitC {
+  margin: 1rem;
+  background-color: black;
+  opacity: 70%;
+  border-radius: 50%;
+}
+.formCreate .createBtn {
+  height: 10vh;
+  width: 15vh;
+  border-radius: 50%;
+}
+.formCreate .notesTextArea {
+  height: 20vh;
+  width: 30vh;
+}
+.formCreate .labelTextArea {
+  gap: 2rem;
+}
+
+.titleC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleC .main-title {
+  margin: 2rem;
+}
+
+.noteButtonC {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.noteButtonC .noteButton {
+  height: 100px;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #f6f2f7;
+  border-style: solid;
+  border-color: #01efac;
+  z-index: 3;
+  padding-top: 2rem;
+  margin: auto;
+}
+
+.currHeadC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh;
+}
+
+.currTextC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25vh;
+}
+
+.currDeleteC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30vh;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25vh;
+}
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -137,9 +234,6 @@ h4, h5, h6 {
   font-weight: lighter;
 }
 
-.wrapper-main {
-  display: flex;
-}
 .wrapper-main .main {
   height: 80vh;
   width: 95%;
@@ -148,4 +242,24 @@ h4, h5, h6 {
   border-style: solid;
   border-color: white;
   border-width: 5px;
+  background-image: url("../assets/splash-curved-dim.jpeg");
+  background-position: center;
+}
+
+.link-sidebar {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f2f7;
+  font-size: 2rem;
+  text-shadow: 0 0 3px #050c26;
+}
+
+.link-notes {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #050c26;
 }/*# sourceMappingURL=style.css.map */
