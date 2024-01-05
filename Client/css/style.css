@@ -54,11 +54,14 @@
   justify-content: space-between;
 }
 .search-wrapper .search {
-  height: 2rem;
+  height: 6vh;
   width: 20%;
-  border-radius: 10%;
-  box-shadow: 0px 0px 8px rgb(25, 13, 15);
+  border-radius: 20%;
   margin-left: auto;
+  border-style: solid;
+  border-color: #01efac;
+  border-width: 3px;
+  box-shadow: 0px 0px 5px #01efac;
 }
 .search-wrapper .search:focus {
   outline: none;
@@ -112,17 +115,23 @@
 .nav-side ul li:nth-child(4) {
   content: "Nests";
   line-height: 70px;
-  background: #780b54;
+  background: #ae1079;
 }
 
 .wrapper-create {
-  background-image: url("../assets/splash-curved-dim.jpeg");
-  background-position: center;
-  background-size: cover;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+}
+.wrapper-create .success {
+  background-color: black;
+  opacity: 70%;
+  border-radius: 30%;
+  width: 50vh;
+  height: 15vh;
+  margin-left: 35%;
+  box-shadow: 0px 0px 10px #efcb19;
 }
 
 .titleCreateC {
@@ -131,10 +140,13 @@
   justify-content: center;
   margin: 5vh;
   background-color: black;
-  opacity: 70%;
-  border-radius: 30%;
+  opacity: 80%;
+  border-radius: 40%;
   width: 30%;
   margin-left: 35%;
+  border-style: solid;
+  border-color: #efcb19;
+  border-width: 3px;
   box-shadow: 0px 0px 10px #efcb19;
 }
 .titleCreateC .titleCreate {
@@ -152,25 +164,41 @@
   border-radius: 20%;
   width: 50%;
   margin-left: 25%;
+  border-style: solid;
+  border-color: #efcb19;
+  border-width: 1px;
   box-shadow: 0px 0px 10px #efcb19;
 }
 .formCreate .noteTitle {
   font-size: 1.4rem;
 }
+.formCreate .titleInput {
+  width: 30vh;
+}
 .formCreate .createC {
   margin: 2rem;
   opacity: 100% !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .formCreate .submitC {
   margin: 1rem;
   background-color: black;
-  opacity: 90%;
+  opacity: 95%;
   border-radius: 50%;
 }
 .formCreate .createBtn {
   height: 10vh;
   width: 15vh;
   border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #ae1079;
+  border-style: solid;
+  border-color: #efcb19;
+  border-width: 3px;
+  box-shadow: 0px 0px 20px #ae1079;
 }
 .formCreate .notesTextArea {
   height: 20vh;
@@ -186,9 +214,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: black;
+  opacity: 80%;
+  border-radius: 40%;
+  width: 40vh;
+  height: 8vh;
+  margin-left: 30%;
+  margin-top: 5%;
+  box-shadow: 0px 0px 10px #01efac;
 }
-.titleC .main-title {
+.titleC .notesTitle {
   margin: 2rem;
+  font-size: 1.5rem;
 }
 
 .noteButtonC {
@@ -209,6 +246,10 @@
   z-index: 3;
   padding-top: 2rem;
   margin: auto;
+}
+.noteButtonC .link-notes {
+  font-size: 1rem;
+  color: black;
 }
 
 .currHeadC {
@@ -273,6 +314,9 @@ h4, h5, h6 {
   margin-top: 0;
   padding: 0;
   color: #f6f2f7;
+  background-image: url("../assets/splash-curved-dim.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 
 .link-sidebar {

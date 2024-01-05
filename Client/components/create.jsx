@@ -78,15 +78,15 @@ const Create = (props) => {
   return (
     <section className='wrapper-create'>
       <div className='titleCreateC'>
-        <h2 className='titleCreate'>Create New Note</h2>
+        <h2 className='titleCreate'>New Note</h2>
       </div>
       <form className='formCreate'>
         {/* <div className='createC'>
           <label htmlFor='upload'>Upload: </label>
         </div> */}
         <div className='createC'>
-          <label htmlFor='fileName' className='noteTitle'> Note Title: </label>
-          <input name="fileName" placeholder="file 1" value={fileName} onChange={nameOnChange} />
+          <label htmlFor='fileName' className='noteTitle'> Title: </label>
+          <input name="fileName" placeholder="Thoughts 1.1.24" className='titleInput' value={fileName} onChange={nameOnChange} />
           {nameError ? (<span className="errorMsg">{nameError}</span>) : null}
         </div>
         {/* <div className='create-container'>

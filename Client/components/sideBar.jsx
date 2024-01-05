@@ -13,7 +13,7 @@ const SideBar = () => {
     <nav className='nav-side'>
       <ul>
         <li><Link to='/create' className="link-sidebar">Create</Link></li>
-        <li><Link to='/files'className="link-sidebar">Files</Link></li>
+        <li><Link to='/files'className="link-sidebar">Notes</Link></li>
         <li><Link to='/tags' className="link-sidebar">Tags</Link></li>
         <li><Link to='/nests' className="link-sidebar">Nests</Link></li>
       </ul>

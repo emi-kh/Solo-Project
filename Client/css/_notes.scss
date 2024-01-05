@@ -1,8 +1,17 @@
 .titleC {
   @include flex-center();
+  background-color: black;
+  opacity: 80%;
+  border-radius: 40%;
+  width: 40vh;
+  height: 8vh;
+  margin-left: 30%;
+  margin-top: 5%;
+  box-shadow: 0px 0px 10px $lightGreen;
 
-  .main-title {
+  .notesTitle {
     margin: $spacing;
+    font-size: 1.5rem;
   }
 }
 
@@ -27,4 +36,10 @@
       padding-top: $spacing;
       margin: auto;
     }
+
+    .link-notes {
+      font-size: 1rem;
+      color: black;
+    }
 }
+

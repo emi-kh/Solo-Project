@@ -22,7 +22,7 @@ const Files = () => {
   return (
     <>
       <div className='titleC'>
-        <h2 className='main-title'>Notes</h2>
+        <h2 className='notesTitle'>Notes</h2>
       </div>
       <div className='noteButtonC'>
           {files.map((file, index) => (
