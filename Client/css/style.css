@@ -53,15 +53,35 @@
 .search-wrapper .search {
   height: 6vh;
   width: 20%;
-  border-radius: 30px/20px;
+  border-radius: 30px 0px 0px 30px;
   margin-left: auto;
+  opacity: 80%;
   border-style: solid;
   border-color: #01efac;
   border-width: 3px;
   box-shadow: 0px 0px 5px #01efac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .search-wrapper .search:focus {
   outline: none;
+}
+.search-wrapper .searchSubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  text-decoration: none;
+  background-color: black;
+  opacity: 80%;
+  color: #f6f2f7;
+  padding: 1rem;
+  border-radius: 0px 30px 30px 0px;
+  border-style: solid;
+  border-color: #01efac;
+  border-width: 3px;
+  box-shadow: 0px 0px 5px #01efac;
 }
 
 .nav-side {

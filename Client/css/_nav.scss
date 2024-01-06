@@ -49,18 +49,35 @@
     display: flex;
     justify-content: space-between;
     .search {
-        height: 6vh;
-        width: 20%;
-        border-radius: 30px / 20px;
-        margin-left: auto;
-        border-style: solid;
-        border-color: $lightGreen;
-        border-width: 3px;
-        box-shadow: 0px 0px 5px $lightGreen;
-        &:focus {
-          outline: none;
-        }
+      height: 6vh;
+      width: 20%;
+      border-radius: 30px 0px 0px 30px;
+      margin-left: auto;
+      opacity: 80%;
+      border-style: solid;
+      border-color: $lightGreen;
+      border-width: 3px;
+      box-shadow: 0px 0px 5px $lightGreen;
+      &:focus {
+        outline: none;
       }
+      @include flex-center();
+    }
+    .searchSubmit {
+      @include flex-center();
+      height: 6vh;
+      text-decoration: none;
+      background-color: black;
+      opacity: 80%;
+      color: $white;
+      padding: 1rem;
+      border-radius: 0px 30px 30px 0px;
+      border-style: solid;
+      border-color: $lightGreen;
+      border-width: 3px;
+      box-shadow: 0px 0px 5px $lightGreen;
+    }
+ 
 }
 
 

@@ -5,12 +5,23 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 const SideBar = () => {
   const [query, setQuery] = useState(null);
+
+  const handleSearch = (e) => {
+    if (e) {
+      setQuery(e.target.value)
+    }
+  }
+  const searchState = {
+    query
+  }
+ 
   
   return (
     <>
-    <div className='search-wrapper'>
-      <input className='search' placeholder='Search' type='string' value={query} onChange={e => setQuery(e.target.value)} ></input>
-    </div>
+   <div className='search-wrapper'>
+     <input className='search' placeholder='Search' type='string' value={query} onChange={handleSearch} ></input>
+     <Link to='/files' state={searchState} className='searchSubmit' >Search</Link>
+   </div>
     <nav className='nav-side'>
       <ul>
         <li><Link to='/create' className="link-sidebar">Create</Link></li>
