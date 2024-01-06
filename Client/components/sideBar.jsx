@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
 
 
 const SideBar = () => {
+  const [query, setQuery] = useState(null);
   
   return (
     <>
     <div className='search-wrapper'>
-      <input className='search' placeholder='Search'></input>
+      <input className='search' placeholder='Search' type='string' value={query} onChange={e => setQuery(e.target.value)} ></input>
     </div>
     <nav className='nav-side'>
       <ul>

@@ -1,16 +1,19 @@
 .titleC {
   @include flex-center();
   background-color: black;
-  opacity: 80%;
-  border-radius: 40%;
+  opacity: 90%;
+  border-radius: 30px / 30px;
   width: 40vh;
   height: 8vh;
-  margin-left: 30%;
+  margin-left: 35%;
   margin-top: 5%;
-  box-shadow: 0px 0px 10px $lightGreen;
+  gap: 2rem;
+  margin-bottom: 5%;
+  box-shadow: 0px 0px 5px $lightGreen;
 
   .notesTitle {
     margin: $spacing;
+    margin-left: 20%;
     font-size: 1.5rem;
   }
 }
@@ -21,24 +24,37 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 1rem;
 
     .noteButton {
-      height: 100px;
-      width: 100px;
+      height: 120px;
+      width: 120px;
       border-radius: 40%;
       background-color: $white;
-      // opacity: 50%;
       border-style: solid;
       border-color: $lightGreen;
       border-width: 7px;
       z-index: 3;
-      padding-top: $spacing;
+      padding: 3%;
       margin: auto;
+      @include flex-center();
+      animation: myAnim 1s ease-in-out 0s 1 normal forwards;
+    }
+    
+    @keyframes myAnim {
+      0% {
+        transform: scaleX(0);
+      }
+    
+      100% {
+        transform: scaleX(1);
+      }
     }
 
     .link-notes {
-      font-size: 1rem;
+      font-size: 90%;
+      // font-weight: bolder;
       color: black;
     }
 }

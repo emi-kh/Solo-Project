@@ -17,24 +17,21 @@
   cursor: pointer;
 }
 
-.wrapper-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .wrapper-top .nav-top {
   color: #f6f2f7;
   gap: 1rem;
   padding: 1rem;
   width: 100%;
   height: 15vh;
+  border-radius: 30px/20px;
   background-image: url("../assets/NoteNest-banner.png");
   background-position: center;
   background-size: cover;
 }
 .wrapper-top .nav-top .site-title {
   font-size: 3rem;
-  margin-left: 40%;
+  margin-top: 2rem;
+  margin-left: 25%;
 }
 .wrapper-top .nav-top ul {
   padding: 0;
@@ -56,7 +53,7 @@
 .search-wrapper .search {
   height: 6vh;
   width: 20%;
-  border-radius: 20%;
+  border-radius: 30px/20px;
   margin-left: auto;
   border-style: solid;
   border-color: #01efac;
@@ -140,14 +137,11 @@
   justify-content: center;
   margin: 5vh;
   background-color: black;
-  opacity: 80%;
-  border-radius: 40%;
+  opacity: 90%;
+  border-radius: 30px/30px;
+  padding: 5px;
   width: 30%;
   margin-left: 35%;
-  border-style: solid;
-  border-color: #efcb19;
-  border-width: 3px;
-  box-shadow: 0px 0px 10px #efcb19;
 }
 .titleCreateC .titleCreate {
   opacity: 100% !important;
@@ -161,13 +155,10 @@
   flex-direction: column;
   background-color: black;
   opacity: 90%;
-  border-radius: 20%;
+  border-radius: 30px/30px;
   width: 50%;
   margin-left: 25%;
-  border-style: solid;
-  border-color: #efcb19;
-  border-width: 1px;
-  box-shadow: 0px 0px 10px #efcb19;
+  animation: myAnim 1s ease-in-out 0s 1 normal forwards;
 }
 .formCreate .noteTitle {
   font-size: 1.4rem;
@@ -191,14 +182,15 @@
 .formCreate .createBtn {
   height: 10vh;
   width: 15vh;
-  border-radius: 50%;
+  border-radius: 30px/30px;
   font-size: 1.5rem;
   font-weight: bolder;
-  color: #ae1079;
+  color: black;
   border-style: solid;
   border-color: #efcb19;
   border-width: 3px;
-  box-shadow: 0px 0px 20px #ae1079;
+  box-shadow: 0px 0px 10px #efcb19;
+  animation: myAnim 1s ease-in-out 0s 1 normal forwards;
 }
 .formCreate .notesTextArea {
   height: 20vh;
@@ -210,21 +202,32 @@
   height: 50%;
 }
 
+@keyframes myAnim {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 .titleC {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
-  opacity: 80%;
-  border-radius: 40%;
+  opacity: 90%;
+  border-radius: 30px/30px;
   width: 40vh;
   height: 8vh;
-  margin-left: 30%;
+  margin-left: 35%;
   margin-top: 5%;
-  box-shadow: 0px 0px 10px #01efac;
+  gap: 2rem;
+  margin-bottom: 5%;
+  box-shadow: 0px 0px 5px #01efac;
 }
 .titleC .notesTitle {
   margin: 2rem;
+  margin-left: 20%;
   font-size: 1.5rem;
 }
 
@@ -233,22 +236,35 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 1rem;
 }
 .noteButtonC .noteButton {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   border-radius: 40%;
   background-color: #f6f2f7;
   border-style: solid;
   border-color: #01efac;
   border-width: 7px;
   z-index: 3;
-  padding-top: 2rem;
+  padding: 3%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: myAnim 1s ease-in-out 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 .noteButtonC .link-notes {
-  font-size: 1rem;
+  font-size: 90%;
   color: black;
 }
 
@@ -256,28 +272,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10vh;
+  margin: 5vh;
+  margin-left: 39%;
+  background-color: black;
+  opacity: 90%;
+  border-radius: 30px/20px;
+  width: 40vh;
+  height: 6vh;
 }
 
 .currTextC {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 25vh;
+  margin-left: 28%;
+  background-color: black;
+  opacity: 90%;
+  width: 80vh;
+  height: 40vh;
+  border-radius: 30px/20px;
 }
 
 .currDeleteC {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30vh;
+  margin: 10vh;
+  margin-left: 39%;
+  background-color: black;
+  opacity: 90%;
+  width: 40vh;
+  height: 6vh;
+  border-radius: 30px/20px;
+}
+.currDeleteC .deleteNote {
+  height: 90%;
+  width: 15vh;
+  border-radius: 30px/20px;
 }
 
 .success {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 25vh;
+  margin-left: 40%;
+  margin-top: 20%;
+  background-color: black;
+  opacity: 90%;
+  width: 40vh;
+  height: 6vh;
+  border-radius: 30px/30px;
 }
 
 *, *:before, *:after {
