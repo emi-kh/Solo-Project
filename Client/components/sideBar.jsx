@@ -19,7 +19,7 @@ const SideBar = () => {
   return (
     <>
    <div className='search-wrapper'>
-     <input className='search' placeholder='Search' type='string' value={query} onChange={handleSearch} ></input>
+     <input className='search' placeholder='123' type='string' value={query} onChange={handleSearch} ></input>
      <Link to='/files' state={searchState} className='searchSubmit' >Search</Link>
    </div>
     <nav className='nav-side'>
